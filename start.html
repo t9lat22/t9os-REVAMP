@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>nothing</title>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7176221127189774"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+     <input style="background: rgba(0,0,0,0.4);  
+ 
+" type="text" id="searchBar" placeholder="Search games by name...">
+
+
+     <h1 class="gtext"></h1>
+
+ 
+
+     <div id="imageContainer">
+  <a href="https://forms.gle/idyRqPcwSoj5Mmjv6">
+    <img class="btn" src="request.png">
+         </a>
+            <a href='/terms.html'>
+    <img class="btn" src="TERM.png" alt="terms">
+         </a>
+     
+          
+          
+
+<style>
+      .btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px ; /* Add !important to ensure it overrides other styles */
+    gap: 150px;
+    transition: transform 0.3s ease-in-out;
+    font-family: sans-serif;
+      transition: all 0.3s ease;   /* smooth hover */
+    font-size: 15px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: none;
+    border-radius: 50px !important; /* Ensure hover state also has the same border-radius */
+
+}
+#searchBar{
+  text-align:center;
+  background: rgba(0, 0, 0, 0.3); 
+border: 1px solid rgba(255, 255, 255, 0.15);  
+  color: white;
+  border-radius: 15px;
+  left:43%;
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:rgb(255, 255, 255);
+    position: fixed; 
+  top: 10px;       
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 1000; 
+
+}
+#imageContainer {
+  margin-top: 70px; 
+}
+    .gtext{
+          text-align:center;
+          font-family: sans-serif;
+background:none;  
+border-radius: 20px;           
+          color:#ffffff;
+                  
+     }
+      img {
+    width: 35px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: translateY(-3px);
+    box-shadow: none;
+    border-radius: 15px;
+  }
+  a{
+     outline:none;
+  }
+  a:focus{
+     outline:none;
+  }
+/* Hide scrollbar on the whole page but keep scrolling */
+html, body {
+  height: 100%;
+  overflow: hidden; /* hide the scrollbar container */
+}
+
+body {
+  overflow: auto; /* still allow scrolling */
+  margin: 0;
+  padding: 0;
+  width: 100vw; /* prevent extra space from scrollbar */
+  background-image: url("/images/background.png");
+}
+
+/* Hide scrollbar for Webkit browsers */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+ 
+</style>
+
+<script>
+  document.getElementById('searchBar').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const images = document.querySelectorAll('#imageContainer img');
+
+    images.forEach(image => {
+      const altText = image.getAttribute('alt') || '';
+      if (altText.toLowerCase().includes(searchTerm)) {
+        image.style.display = 'inline-block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>
